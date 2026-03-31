@@ -1,4 +1,3 @@
-import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion';
 import { text } from "../styles";
 // import { services } from '../constants';
