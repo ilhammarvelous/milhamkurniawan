@@ -1,51 +1,108 @@
-import React, { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Decal, Float, OrbitControls, Preload, useTexture  } from '@react-three/drei'
-import CanvasLoader from '../Loader';
+// import React, { Suspense } from 'react'
+// import { Canvas } from '@react-three/fiber'
+// import { Decal, Float, OrbitControls, Preload, useTexture  } from '@react-three/drei'
+// import CanvasLoader from '../Loader';
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+// const Ball = (props) => {
+//   const [decal] = useTexture([props.imgUrl]);
+
+//   return (
+//     <Float speed={1.5} rotationIntensity={1} floatIntensity={1.5}>
+//       <ambientLight intensity={0.25}/>
+//       <directionalLight position={[0, 0, 0.05]} />
+//       <mesh castShadow receiveShadow scale={2.75}>
+//         <icosahedronGeometry args={[1, 1]} />
+//         <meshStandardMaterial 
+//           color="#fff8eb"
+//           polygonOffset
+//           polygonOffsetFactor={-5}
+//           flatShading
+//         />
+//         <Decal 
+//           position={[0, 0, 1]}
+//           rotation={[ 2 * Math.PI, 0, 6.25 ]}
+//           map={decal}
+//         />
+//       </mesh>
+//     </Float>
+//   )
+// }
+
+// const BallCanvas = ({ icon }) => {
+//   return(
+//     <Canvas
+//       frameloop="always"
+//       dpr={[1, 1.5]}
+//     >
+//       <Suspense fallback={<CanvasLoader />}>
+//         <OrbitControls 
+//           enableZoom={false}
+//           enablePan={false}
+//           rotateSpeed={0.5}
+//         />
+//         <Ball imgUrl={icon} />
+//       </Suspense>
+
+//       <Preload all />
+//     </Canvas>
+//   )
+// }
+
+// export default BallCanvas
+
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+} from "@react-three/drei";
+import CanvasLoader from "../Loader";
+
+const Ball = ({ imgUrl }) => {
+  const texture = useTexture(imgUrl);
 
   return (
-    <Float speed={1.5} rotationIntensity={1} floatIntensity={1.5}>
-      <ambientLight intensity={0.25}/>
-      <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+    <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[0, 0, 2]} />
+
+      <mesh castShadow receiveShadow scale={2.4}>
         <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial 
+        <meshStandardMaterial
           color="#fff8eb"
+          flatShading
           polygonOffset
           polygonOffsetFactor={-5}
-          flatShading
         />
-        <Decal 
+
+        <Decal
           position={[0, 0, 1]}
-          rotation={[ 2 * Math.PI, 0, 6.25 ]}
-          map={decal}
+          rotation={[0, 0, 0]}
+          scale={0.8}
+          map={texture}
         />
       </mesh>
     </Float>
-  )
-}
+  );
+};
 
 const BallCanvas = ({ icon }) => {
-  return(
+  return (
     <Canvas
       frameloop="always"
       dpr={[1, 1.5]}
+      gl={{ antialias: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls 
-          enableZoom={false}
-          enablePan={false}
-          rotateSpeed={0.5}
-        />
+        <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
-
       <Preload all />
     </Canvas>
-  )
-}
+  );
+};
 
-export default BallCanvas
+export default BallCanvas;

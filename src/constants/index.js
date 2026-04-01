@@ -9,17 +9,10 @@ import {
   reactjs,
   tailwind,
   git,
-  // meta,
-  // starbucks,
-  // tesla,
-  // shopify,
   otw,
   abs,
   ql,
-  // carrent,
   imavi,
-  // jobit,
-  // tripguide,
   rentcar,
   pos,
   php,
@@ -29,10 +22,8 @@ import {
   mysql,
   sislap,
   kopi,
-  // gym,
   postman,
   python,
-  // colab,
 } from "../assets";
 
 export const navLinks = [
@@ -130,10 +121,6 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  // {
-  //   name: "Colab",
-  //   icon: colab,
-  // },
 ];
 
 const experiences = [
