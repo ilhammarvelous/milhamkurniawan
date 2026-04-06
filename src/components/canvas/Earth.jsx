@@ -56,7 +56,7 @@ const Earth = ({ isMobile }) => {
   return (
     <primitive
       object={earth.scene}
-      scale={isMobile ? 2 : 2.5}
+      scale={isMobile ? 2.6 : 2.5}
       position-y={0}
       rotation-y={0}
     />

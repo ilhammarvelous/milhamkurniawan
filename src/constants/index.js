@@ -200,7 +200,7 @@ const projects = [
   {
     name: "Sistem Point of Sale (POS)",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Sistem yang digunakan dalam bisnis modern untuk membantu memproses data transaksi, mengelola stok barang, dan menganalisis data penjualan.",
     tags: [
       {
         name: "Bootstrap",
@@ -221,7 +221,7 @@ const projects = [
   {
     name: "Web IMAVI",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Aplikasi front end yang memungkinkan pengguna untuk melihat informasi Web IMAVI.",
     tags: [
       {
         name: "Bootstrap",
@@ -234,7 +234,7 @@ const projects = [
   {
     name: "Rental Mobil",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Platform rental mobil yang memungkinkan pengguna untuk memesan dan menyewa mobil.",
     tags: [
       {
         name: "Laravel",
@@ -259,7 +259,7 @@ const projects = [
   {
     name: "Sistem Manajemen Penjualan",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Aplikasi Full-Stack manajemen penjualan digunakan untuk mengelola stok barang, transaksi, dan menganalisis data penjualan.",
     tags: [
       {
         name: "Vuejs",
@@ -284,7 +284,7 @@ const projects = [
    {
     name: "Web Kedai Kopi",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Aplikasi web yang memungkinkan pengguna bisa memesan kopi, serta menawarkan rekomendasi pilihan kopi yang populer.",
     tags: [
       {
         name: "HTML",
